@@ -1,13 +1,17 @@
-<table>
-    <thead>
+@component('admin.layout.elements.body')
+    @slot('title') Páginas @endslot
+    @slot('description') Administração de Páginas @endslot
+
+    <table class="table table-hover table-striped">
+        <thead>
         <tr>
-            <th>#</th>
+            <th>ID</th>
             <th>title</th>
             <th>ações</th>
         </tr>
-    </thead>
+        </thead>
 
-    <tbody>
+        <tbody>
         @foreach($pages as $page)
             <tr>
                 <td>{{ $page->id }}</td>
@@ -15,5 +19,7 @@
                 <td>#</td>
             </tr>
         @endforeach
-    </tbody>
-</table>
+        </tbody>
+    </table>
+
+@endcomponent
