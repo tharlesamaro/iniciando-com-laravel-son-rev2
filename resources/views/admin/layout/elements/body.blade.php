@@ -9,4 +9,5 @@
             {{ $slot }}
         </div>
     </div>
+
 @endcomponent
